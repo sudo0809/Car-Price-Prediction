@@ -1,0 +1,59 @@
+body {
+  padding: 0px;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #041B2D, #004E9A);
+  text-align: center;
+  font-family: arial;
+  align-items: center; }
+
+div .headline {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  border-bottom-style: solid;
+  border-width: 3px; }
+div .pred_text {
+  margin: 5px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 30px; }
+
+form {
+  display: inline-block; }
+  form .input_value {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center; }
+  form .left {
+    align-items: center;
+    padding: 2em; }
+    form .left h3 {
+      color: white; }
+    form .left .box {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center; }
+  form .right {
+    padding: 2em; }
+    form .right h3 {
+      color: white; }
+    form .right .box {
+      border-radius: 14px;
+      height: 30px;
+      padding-left: 4em;
+      padding-right: 4em;
+      font-size: 16px;
+      text-align: center; }
+  form button {
+    padding: 8px 15px 8px 15px;
+    font-size: large;
+    border-radius: 14px;
+    font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */

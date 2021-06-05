@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="shortcut icon" href="#"> -->
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+    <div>
+        <h2 class="headline">Predictive Analysis of Car Price</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="input_value">
+                <div class="left">
+                    <h3>Insuarance Risk Rating (-3 to 3 i.e risky to safe)</h3>
+                    <input class="box" type="number" name="Symboling">
+                    <h3>What is car length (in cm)</h3>
+                    <input class="box" name="Car_Length" , required="required">
+                    <h3>What is car width (in cm)</h3>
+                    <input class="box" name="Car_Width" , required="required">
+                    <h3>What is weight of car in kg without any occupant or baggage</h3>
+                    <input class="box" name="curbweight" , required="required">
+                    <h3>Specify the engine size (in cubic-inch)</h3>
+                    <input class="box" name="enginesize" , required="required">
+                    <h3>Specify the bore ratio of car</h3>
+                    <input class="box" name="boreratio" , required="required">
+                    <h3>What the horse power </h3>
+                    <input class="box" name="horsepower" , required="required">
+                    <h3>What is the Mileage in city</h3>
+                    <input class="box" name="citympg" , required="required">
+                    <h3>What is the Mileage on highway</h3>
+                    <input class="box" name="highwaympg" , required="required">
+                </div>
+                <div class="right">
+                    <h3>What Is the Fuel type?</h3>
+                    <select name="fueltype_gas" class="box" required="required">
+                        <option value="Gas">Gas</option>
+                        <option value="Diesel">Diesel</option>
+                    </select>
+                    <h3>What Is the Aspiration used in Car?</h3>
+                    <select name="aspiration_turbo" class="box" required="required">
+                        <option value="Turbo">Turbo</option>
+                        <option value="Std">Standard</option>
+                    </select>
+                    <h3>what is the Car Body</h3>
+                    <select name="carbody_types" class="box" required="required">
+                        <option value="Convertible">Convertible</option>
+                        <option value="HatchBack">HatchBack</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Wagon">Wagon</option>
+                        <option value="Hardtop">HardTop</option>
+                    </select>
+                    <h3>What is the Engine type select below.</h3>
+                    <select name="enginetype_select" class="box" required="required">
+                        <option value="ohcv">ohcv</option>
+                        <option value="ohc">ohc</option>
+                        <option value="l">l</option>
+                        <option value="rotor">rotor</option>
+                        <option value="ohcf">ohcf</option>
+                        <option value="dohcv">dohcv</option>
+                        <option value="dohc">dohc</option>
+                    </select>
+                    <h3>How many Cylinder are Placed in the car?</h3>
+                    <select name="cylindernumber_select" class="box" id="cylinder_no" type="number" required="required">
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                        <option value=8>8</option>
+                        <option value=12>12</option>
+                    </select>
+                    <h3>How may door are present in the car</h3>
+                    <select name="doornumber" class="box" id=door_no required="required">
+                        <option value="Two">Two</option>
+                        <option value="Four">Four</option>
+                    </select>
+                    <h3>Where is the engine Located?</h3>
+                    <select name="enginelocation" class="box" id="engine_loc" required="required">
+                        <option value="front">Front</option>
+                        <option value="rear">Rear</option>
+                    </select>
+                    <h3>What is the type of Drive Wheel?</h3>
+                    <select name="drivewheel" class="box" id="drive_wheel" required="required">
+                        <option value="fwd">Forward Wheels</option>
+                        <option value="rwd">Backward Wheels</option>
+                        <option value="4wd">All 4 Wheels</option>
+                    </select>
+                    <h3>Select the type of Fuel System?</h3>
+                    <select name="fuelsystem_select" class="box" id="fuelsystem" required="required">
+                        <option value="1bbl">1bbl</option>
+                        <option value="2bbl">2bbl</option>
+                        <option value="4bbl">4bbl</option>
+                        <option value="mfi">mfi</option>
+                        <option value="idi">idi</option>
+                        <option value="mpfi">mpfi</option>
+                        <option value="spdi">spdi</option>
+                        <option value="spfi">spfi</option>
+                    </select>
+                </div>
+            </div>
+            <button id="sub" type="submit">calculate the selling price</button>
+        </form>
+        <br><br>
+        <h3 class="pred_text">{{ prediction_text }}</h3>
+    </div>
+</body>
+
+</html>
