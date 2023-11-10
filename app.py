@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request
-import requests
 import pickle
-import jsonify
 
 app = Flask(__name__, static_url_path='/static', static_folder="static")
 model = pickle.load(open('random_forest_regressor_model.pkl', 'rb'))
