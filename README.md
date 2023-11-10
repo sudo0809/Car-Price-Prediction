@@ -6,7 +6,13 @@ The above site is not working due to free hosting by heroku stopped on November 
 
 
 <h2>To run the project in the local run the below line in console</h2>
-> pip3 install -r requirements.txt 
+
+```
+pip3 install -r requirements.txt 
+```
 
 <h2>Then start the app by running</h2>
-> python3 app.py
+
+```
+python3 app.py
+```
